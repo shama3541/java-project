@@ -27,7 +27,7 @@ pipeline {
              }
         stage('Docker image push') {
            steps {
-                 withCredentials([usernamePassword(credentialsId: '5d191d1a-24fe-49f5-af60-5a965ab47da1', passwordVariable: 'Password', usernameVariable: 'Username')]) {
+                 withCredentials([usernamePassword(credentialsId: '114b914f-b8b1-4ef2-a1b4-93337429d550', passwordVariable: 'Password', usernameVariable: 'Username')]) {
                  sh "sudo docker login -u ${env.Username} -p ${env.Password}"
                  sh "sudo docker image tag myjava-image myjava-image:${BUILD_NUMBER}"
                  sh "sudo docker image tag myjava-image shama3541/myjava-image:${BUILD_NUMBER}"
