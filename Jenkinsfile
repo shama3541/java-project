@@ -31,7 +31,7 @@ pipeline {
                  sh "sudo docker login -u ${env.Username} -p ${env.Password}"
                  sh "sudo docker image tag myjava-image myjava-image:${BUILD_NUMBER}"
                  sh "sudo docker image tag myjava-image shama3541/myjava-image:${BUILD_NUMBER}"
-                 sh "sudo docker image push shama3541/myjava-image:${BUILD_NUMBER}"" 
+                 sh "sudo docker image push shama3541/myjava-image:${BUILD_NUMBER}"
                } 
              }  
           }
