@@ -1,6 +1,6 @@
 pipeline {
    environment {
-     git_url = "https://github.com/salilkul/java-project.git"
+     git_url = "https://github.com/shama3541/java-project.git"
      git_branch = "master"
    }
 
@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Pull Source') {
       steps {
-        git credentialsId: '1b3c889a-74a8-4fb0-a021-745e01d0311c', branch: "${git_branch}", url: "${git_url}"
+        git credentialsId: 'gitcred', branch: "${git_branch}", url: "${git_url}"
        
       }
      }
